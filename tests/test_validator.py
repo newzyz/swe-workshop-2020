@@ -40,7 +40,7 @@ class TestUtility(unittest.TestCase):
         self.assertEqual(False, validate_id(""))
 
     def test_validate_id_with_13_digit(self):
-        self.assertEqual(True, validate_id("1234567890123"))
+        self.assertEqual(True, validate_id("1809900933347"))
 
     def test_validate_id_with_not_13_digit(self):
         self.assertEqual(False, validate_id("12345678901234"))

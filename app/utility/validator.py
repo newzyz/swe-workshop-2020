@@ -28,7 +28,13 @@ def validate_id(id):
 
     if(id.isdigit()):
         if(len(id) == 13):
-            return True
+            sum = 0
+            for i in range(len(id) - 1):
+                sum += int(id[i]) * (len(id) - i)
+            if(11 - (sum % 11) == int(id[12])):
+                return True
+            else:
+                return False
         else:
             return False
     else:
