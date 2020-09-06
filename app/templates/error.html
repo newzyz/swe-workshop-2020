@@ -15,7 +15,7 @@
     <title>เราจะรวยด้วยกัน</title>
     <style>
       section {
-        background-image: url('../static/background.jpg');
+        background-image: url("../static/background.jpg");
         min-height: 100vh;
         background-size: contain;
         background-repeat: round;
@@ -50,7 +50,7 @@
 
                 <div class="has-text-centered">
                   <h1 class="title">เกิดข้อผิดพลาด</h1>
-                  <h2 class="title">{{ ", ".join(message) }}</h2>
+                  <h2 class="title">{{ message }}</h2>
                 </div>
                 <a href="javascript:history.back()" class="button">แก้ไข</a>
               </div>
