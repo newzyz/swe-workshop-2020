@@ -22,7 +22,17 @@ def validate_name(name):
 
 
 def validate_id(id):
-    return True
+    id = str(id)
+    if(id == ""):
+        return False
+
+    if(id.isdigit()):
+        if(len(id) == 13):
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 def validate_phone_number(phone_number):

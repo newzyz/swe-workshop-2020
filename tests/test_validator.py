@@ -3,6 +3,7 @@ from app.utility.validator import validate_name, validate_id, validate_phone_num
 
 
 class TestUtility(unittest.TestCase):
+    # name check
     def test_validate_name_with_valid_input(self):
         self.assertEqual(True, validate_name("วิทวัส"))
 
@@ -32,6 +33,23 @@ class TestUtility(unittest.TestCase):
 
     def test_validate_name_with_space(self):
         self.assertEqual(False, validate_name("chu tima"))
+
+# id check
+
+    def test_validate_id_with_empty(self):
+        self.assertEqual(False, validate_id(""))
+
+    def test_validate_id_with_13_digit(self):
+        self.assertEqual(True, validate_id("1234567890123"))
+
+    def test_validate_id_with_not_13_digit(self):
+        self.assertEqual(False, validate_id("12345678901234"))
+
+    def test_validate_id_with_alpha_digit(self):
+        self.assertEqual(False, validate_id("12345678901nm"))
+
+    def test_validate_id_with_alpha(self):
+        self.assertEqual(False, validate_id("chutimachutim"))
 
 
 if __name__ == '__main__':
